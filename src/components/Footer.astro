@@ -1,20 +1,15 @@
 ---
-import { GITHUB_REPO_URL } from '../config';
+import { GITHUB_REPO_URL, TWITTER_URL } from '../config';
 import Link from './Link.astro';
 
 const navLinks = [
-  {
-    title: '/now',
-    href: '/now',
-    isExternal: false,
-  },
   {
     title: 'Bookmarks',
     href: '/bookmarks',
     isExternal: false,
   },
   {
-    title: 'Lists',
+    title: 'Listas',
     href: '/lists',
     isExternal: false,
   },
@@ -30,7 +25,7 @@ const navLinks = [
   },
   {
     title: 'Twitter',
-    href: 'https://twitter.com/noghartt',
+    href: 'https://twitter.com/pviana0',
     isExternal: true,
   },
   {
@@ -58,6 +53,10 @@ const navLinks = [
       ))}
     </ul>
   </nav>
+  <div>
+    <p>The blog is under <Link href={`${GITHUB_REPO_URL}/blob/main/LICENSE`} isExternal>GNU AGPLv3</Link> and <Link href={`${GITHUB_REPO_URL}/blob/main/LICENSE-posts`} isExternal>CC BY-SA 4.0</Link> licenses.</p>
+    <p>If you want to reach me, feel free to contact on <Link href={TWITTER_URL}>Twitter</Link> or via <Link href="mailto:pedrohenriqueleandroviana@gmail.com">email</Link>.</p>
+  </div>
 </footer>
 
 <style>
@@ -65,17 +64,19 @@ const navLinks = [
     border-top: 1px solid rgba(0,0,0,0.2);
     display: flex;
     align-items: flex-end;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: var(--spacing-4x);
     padding-top: var(--spacing);
+    gap: 16px;
   }
 
   @media screen and (max-width: 425px) {
     footer {
       flex-direction: column-reverse;
       align-items: center;
-      gap: var(--spacing);
+      flex-wrap: wrap;
+      gap: 32px;
     }
 
     footer * {

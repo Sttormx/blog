@@ -3,7 +3,6 @@ import { getCollection } from 'astro:content';
 
 import Layout from "../layout/Layout.astro";
 import Link from "../components/Link.astro";
-import { GITHUB_REPO_URL, TWITTER_URL } from '../config';
 
 const [posts, lists] = await Promise.all([
   getCollection('blog', ({ data }) => !data.draft),
@@ -17,14 +16,14 @@ const postsSorted = posts.sort((a, b) =>
 ---
 
 <Layout>
-  <h1>Noghartt's garden</h1>
-  <section class="description">
-    <p>The place where I put all my ideas.</p>
-    <p>The blog is under <Link href={`${GITHUB_REPO_URL}/blob/main/LICENSE`} isExternal>GNU AGPLv3</Link> and <Link href={`${GITHUB_REPO_URL}/blob/main/LICENSE-posts`} isExternal>CC BY-SA 4.0</Link> licenses.</p>
-    <p>If you want to reach me, feel free to contact on <Link href={TWITTER_URL}>Twitter</Link> or via <Link href="mailto:hi@noghartt.dev">email</Link>.</p>
-  </section>
+  <div>
+    <h1>Pedro Viana</h1>
+    <section class="description">
+      <p>Aqui falo sobre programação, matemática e arquitetura de software.</p>
+    </section>
+  </div>
   <section class="lists">
-    <h2>lists.</h2>
+    <h2>Listas</h2>
     <ul>
       {lists.map(list => (
         <li>
@@ -38,7 +37,7 @@ const postsSorted = posts.sort((a, b) =>
     </ul>
   </section>
   <section class="posts">
-    <h2>posts.</h2>
+    <h2>Artigos</h2>
     <ul>
       {postsSorted.map(post => (
         <li>
@@ -53,6 +52,7 @@ const postsSorted = posts.sort((a, b) =>
         </li>
       ))}
     </ul>
+  </section>
   </section>
 </Layout>
 

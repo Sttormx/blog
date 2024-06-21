@@ -19,7 +19,7 @@ const getBlogRoutesRedirect = async () => {
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://noghartt.dev',
+  site: 'https://pviana.dev',
   integrations: [
     sitemap(),
     react(),

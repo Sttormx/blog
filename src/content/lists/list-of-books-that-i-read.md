@@ -1,25 +1,17 @@
 ---
-title: List of Books That I Read
+title: Materiais de estudo - Golang
 tags:
   - list
 ---
 
-This is a list containing all the books that I read
-or will read at some time.
+Contém materiais e links úteis para estudar Golang.
 
-## 2024
+## Aprender
+https://go101.org/
+https://go.dev/solutions/case-studies
 
-- Database Internals, by Alex Petrov
+## Frameworks
+https://awesome-go.com/
 
-## 2023
-
-- Retorica, from Aristotles
-- Meditations, from Marcus Aurelius
-- The Lean Startup
-- Designing Data Intensive Applications
-- How to Take Smart Notes
-- Thinking in Systems
-- Design Systems
-- Discourse on the Method
-- Clear Thinking
-- Make It Stick
+## Newsletters
+https://golangweekly.com/
