@@ -3,11 +3,11 @@ import { GITHUB_REPO_URL, TWITTER_URL } from '../config';
 import Link from './Link.astro';
 
 const navLinks = [
-  {
-    title: 'Bookmarks',
-    href: '/bookmarks',
-    isExternal: false,
-  },
+  // {
+  //   title: 'Bookmarks',
+  //   href: '/bookmarks',
+  //   isExternal: false,
+  // },
   {
     title: 'Listas',
     href: '/lists',
@@ -53,10 +53,6 @@ const navLinks = [
       ))}
     </ul>
   </nav>
-  <div>
-    <p>The blog is under <Link href={`${GITHUB_REPO_URL}/blob/main/LICENSE`} isExternal>GNU AGPLv3</Link> and <Link href={`${GITHUB_REPO_URL}/blob/main/LICENSE-posts`} isExternal>CC BY-SA 4.0</Link> licenses.</p>
-    <p>If you want to reach me, feel free to contact on <Link href={TWITTER_URL}>Twitter</Link> or via <Link href="mailto:pedrohenriqueleandroviana@gmail.com">email</Link>.</p>
-  </div>
 </footer>
 
 <style>
